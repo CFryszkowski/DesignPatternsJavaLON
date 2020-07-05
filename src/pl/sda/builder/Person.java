@@ -73,23 +73,32 @@ public class Person {
         }
 
         public Builder withSurname(String surname){
-            person.setName(surname);
+            person.setSurname(surname);
             return this;
         }
 
         public Builder withAddress(String address){
-            person.setName(address);
+            person.setAddress(address);
             return this;
         }
 
-        public Builder withAge(String age){
-            person.setName(age);
+        public Builder withAge(int age){
+            person.setAge(age);
             return this;
         }
 
-        public Builder withHeight(String height){
-            person.setName(height);
+        public Builder withHeight(int height){
+            person.setHeight(height);
             return this;
+        }
+
+        public Person build(){
+            //metoda swap
+            Person copy = person;
+
+            person= new Person();  //reset
+
+           return copy;
         }
 
     }
