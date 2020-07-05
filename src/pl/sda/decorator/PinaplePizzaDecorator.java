@@ -8,7 +8,7 @@ public class PinaplePizzaDecorator extends  AbstractPizzaDecorator {
 
     @Override
     public double price() {
-        return 20;
+        return abstractPizza.price() + 4.0;
     }
 
     @Override
